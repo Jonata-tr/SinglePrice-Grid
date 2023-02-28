@@ -23,7 +23,7 @@ body{
   margin-top: 40px;
 }
 
-p, li{
+ p, li{
   font-size: .9rem;
   line-height: 1.8;
 }
@@ -49,7 +49,7 @@ main{
 
 .join{
   gap: 20px;
-  border-radius: 5px 5px;
+  border-radius: 5px 5px 0 0;
   background-color: #fff;
 }
 
@@ -94,7 +94,7 @@ main{
 
 
 .price a{
-  display: block;
+  display: inline;
   padding: 16px;
   box-shadow: 0 0 20px 0 #00000074;
   color: #fff;
@@ -113,4 +113,43 @@ main{
 
 .whyUs ul li{
   list-style-type: none;
+}
+
+@media (min-width:768px){
+
+  body{
+    height: 100vh;
+    align-content: center;
+    margin: 0;
+  }
+
+  h1{
+    font-size: 1.6rem;
+  }
+
+  p, li{
+    font-size: 1rem;
+  }
+
+  main{
+    width: 700px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .join{
+    grid-column: 1 / -1;
+  }
+
+  .price{
+    border-radius: 0 0 0 5px;
+  }
+
+  .whyUs{
+    border-radius: 0 0 5px 0;
+  }
+
+  .price a{
+    padding: 20px;
+    align-self: center;
+  }
 }
